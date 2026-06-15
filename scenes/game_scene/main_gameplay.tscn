@@ -15,7 +15,7 @@ modulate = Color(0.30087236, 0.3421596, 0.3490409, 1)
 position = Vector2(320, 180)
 texture = ExtResource("1_qr4x0")
 
-[node name="Hexmap" parent="." unique_id=159319909 instance=ExtResource("1_7ytlq")]
+[node name="Hexmap" parent="." unique_id=159319909 groups=["hexmap_layer"] instance=ExtResource("1_7ytlq")]
 position = Vector2(296, 110)
 
 [node name="CardDropArea" type="Area2D" parent="." unique_id=650228505]
