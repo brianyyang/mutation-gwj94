@@ -59,7 +59,7 @@ state = 2
 
 [node name="HoveringState" type="Node" parent="CardStateMachine" unique_id=2010752657]
 script = ExtResource("6_kwdoj")
-state = 4
+state = 3
 
 [node name="ReleasedState" type="Node" parent="CardStateMachine" unique_id=1618711805]
 script = ExtResource("6_iq0fh")
@@ -69,7 +69,7 @@ state = 4
 position = Vector2(25, 15)
 texture = ExtResource("8_iq0fh")
 region_enabled = true
-region_rect = Rect2(1, 2, 29, 26)
+region_rect = Rect2(33, 2, 29, 26)
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

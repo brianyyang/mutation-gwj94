@@ -8,6 +8,8 @@ func enter() -> void:
 	card_ui.reparent_requested.emit(card_ui)
 	card_ui.color.color = Color("#266116")
 	card_ui.pivot_offset = Vector2.ZERO
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	card_ui.color.visible = true
 
 
 func on_gui_input(event: InputEvent) -> void:
