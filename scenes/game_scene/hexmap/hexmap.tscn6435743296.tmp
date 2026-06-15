@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cjd23k2tft2rx"]
 
 [ext_resource type="Texture2D" uid="uid://dkkhvhwektc3p" path="res://assets/sprites/hexagon_sprites.png" id="1_xwcvx"]
-[ext_resource type="Script" uid="uid://cecvs73jva3t3" path="res://scenes/game_scene/hexmap/hexmap.gd" id="2_fpbsm"]
+[ext_resource type="Script" uid="uid://cecvs73jva3t3" path="res://scripts/hexmap.gd" id="2_fpbsm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fpbsm"]
 texture = ExtResource("1_xwcvx")
@@ -26,9 +26,9 @@ tile_size = Vector2i(32, 30)
 sources/0 = SubResource("TileSetAtlasSource_fpbsm")
 
 [node name="Hexmap" type="Node2D" unique_id=159319909]
-scale = Vector2(1.5, 1.5)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1423983626]
+position = Vector2(320, 180)
 tile_set = SubResource("TileSet_x3rr0")
 script = ExtResource("2_fpbsm")
 map_size = 5

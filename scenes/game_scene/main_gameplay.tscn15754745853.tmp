@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://1purkc4pdqx3"]
+
+[ext_resource type="PackedScene" uid="uid://cjd23k2tft2rx" path="res://scenes/game_scene/hexmap/hexmap.tscn" id="1_7ytlq"]
+[ext_resource type="Texture2D" uid="uid://cohcy04j8gask" path="res://assets/images/lab_background_temp.jpg" id="1_qr4x0"]
+[ext_resource type="PackedScene" uid="uid://d1xk4vbuq5ymx" path="res://scenes/game_scene/cards/card_ui.tscn" id="3_aba8m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ytlq"]
+size = Vector2(640, 270)
+
+[node name="MainGameplay" type="Node2D" unique_id=617926289]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1957055916]
+modulate = Color(0.30087236, 0.3421596, 0.3490409, 1)
+position = Vector2(320, 180)
+texture = ExtResource("1_qr4x0")
+
+[node name="Hexmap" parent="." unique_id=159319909 instance=ExtResource("1_7ytlq")]
+position = Vector2(320, 90)
+
+[node name="CardDropArea" type="Area2D" parent="." unique_id=650228505]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea" unique_id=330057825]
+position = Vector2(320, 135)
+shape = SubResource("RectangleShape2D_7ytlq")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2024742288]
+
+[node name="Hand" type="HBoxContainer" parent="UI" unique_id=1029941788]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -60.0
+offset_right = 125.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+
+[node name="CardUI" parent="UI/Hand" unique_id=354247400 instance=ExtResource("3_aba8m")]
+layout_mode = 2
+
+[node name="CardUI2" parent="UI/Hand" unique_id=1872779568 instance=ExtResource("3_aba8m")]
+layout_mode = 2
+
+[node name="CardUI3" parent="UI/Hand" unique_id=1821917288 instance=ExtResource("3_aba8m")]
+layout_mode = 2
